@@ -5,9 +5,10 @@ function myFunction(){
   const channel = properties.getProperty('CHANNEL');
   const iconUrl = properties.getProperty('ICON_URL');
   const username = properties.getProperty('USERNAME');
+  const eventList = listupEvent(gmailAddress);
 
   if (eventList != '') {
-    msg += '【本日の予定】\n' + listupEvent(gmailAddress);
+    msg += listupEvent(gmailAddress);
   };
 
   if (msg === '') return;
